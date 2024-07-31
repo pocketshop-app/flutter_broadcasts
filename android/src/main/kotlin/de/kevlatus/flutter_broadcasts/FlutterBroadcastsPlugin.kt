@@ -50,9 +50,9 @@ class CustomBroadcastReceiver(
     fun start(context: Context) {
         if (Build.VERSION.SDK_INT >= 33) {
             val receiverFlags = if (listenToBroadcastsFromOtherApps) {
-                ContextCompat.RECEIVER_EXPORTED
+                Context.RECEIVER_EXPORTED
             } else {
-                ContextCompat.RECEIVER_NOT_EXPORTED
+                Context.RECEIVER_NOT_EXPORTED
             }
             context.registerReceiver(this, intentFilter, receiverFlags)
         } else {
