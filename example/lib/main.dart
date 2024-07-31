@@ -16,6 +16,7 @@ class _MyAppState extends State<MyApp> {
     names: <String>[
       "de.kevlatus.flutter_broadcasts_example.demo_action",
     ],
+    listenToBroadcastsFromOtherApps: false,
   );
 
   @override
