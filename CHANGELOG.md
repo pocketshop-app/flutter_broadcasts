@@ -1,3 +1,7 @@
+## 0.5.0
+
+* Upgrade gradle plugin 8.1
+
 ## 0.4.0
 
 * Fix duplicated listeners by removing .asBroadcastStream
