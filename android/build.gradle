@@ -2,14 +2,14 @@ group 'de.kevlatus.flutter_broadcasts'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.8.22'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath 'com.android.tools.build:gradle:8.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -30,13 +30,17 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        compileSdk 33
+        compileSdk 35
         minSdkVersion 24
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
